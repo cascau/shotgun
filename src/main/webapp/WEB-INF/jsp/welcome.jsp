@@ -29,7 +29,7 @@ body {
                                     <td><c:out value="${event.name}"/></td>
                                     <td><span>From <c:out value="${event.startdt}"/></span></td>
                                     <td><span>To <c:out value="${event.enddt}"/></span></td>
-                                    <td></td>
+                                    <td> </td>
                                     <c:forEach var="performer" items="${event.performers}">
                                         <td><c:out value="${performer.name}"/></td>
                                     </c:forEach>
