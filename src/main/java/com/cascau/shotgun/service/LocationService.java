@@ -10,6 +10,7 @@ import com.cascau.shotgun.contract.Location;
 import com.cascau.shotgun.contract.dto.LocationRequestDto;
 import com.cascau.shotgun.contract.event.Event;
 import com.cascau.shotgun.contract.performer.Performer;
+import java.sql.SQLException;
 import java.util.List;
 import org.springframework.stereotype.Component;
 
@@ -20,9 +21,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class LocationService extends BaseService {
     
-    public List<Location> getLocations(LocationRequestDto request) {
+    public List<Location> getLocations(LocationRequestDto request) throws SQLException {
         
-        return null;
+        List<Location> Locations = this.locationDao.getLocations(request);
+        return Locations;
     }
     
     public List<Event> getEventsByLocation(LocationRequestDto request) {

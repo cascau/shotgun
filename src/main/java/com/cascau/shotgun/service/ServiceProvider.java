@@ -12,6 +12,7 @@ import com.cascau.shotgun.contract.Release;
 import com.cascau.shotgun.contract.Sponsor;
 import com.cascau.shotgun.contract.Ticket;
 import com.cascau.shotgun.contract.dto.ActorRequestDto;
+import com.cascau.shotgun.contract.dto.BaseRequestDto;
 import com.cascau.shotgun.contract.event.Event;
 import com.cascau.shotgun.contract.dto.EventRequestDto;
 import com.cascau.shotgun.contract.dto.InstrumentRequestDto;
@@ -97,9 +98,13 @@ public class ServiceProvider extends BaseServiceProvider {
         if (request == null) {
             return null;
         }
-        
-        List<Location> locations = this.actorService.getLocationsByActor(request);
-        return locations;
+        try {
+            List<Location> locations = this.actorService.getLocationsByActor(request);
+            return locations;
+        } catch (SQLException e) {
+            Logger.getLogger(ServiceProvider.class.getName()).log(Level.SEVERE, null, e);
+        }
+        return null;
     }
     /* 
     * End ACTOR service
@@ -129,6 +134,15 @@ public class ServiceProvider extends BaseServiceProvider {
                     
                     List<Performer> performers = this.getPerformers(performerRequest);
                     event.setPerformers(performers);
+                    
+                    //get locations         
+                    LocationRequestDto locationRequest = new LocationRequestDto();
+                    locationRequest.setId(event.getId());
+                    locationRequest.setStartdt(event.getStartdt());
+                    locationRequest.setEnddt(locationRequest.getEnddt());
+                    
+                    List<Location> locations = this.getLocationsByEvent(locationRequest);
+                    event.setLocations(locations);
                 }
             }
             
@@ -184,14 +198,19 @@ public class ServiceProvider extends BaseServiceProvider {
         return sponsors;
     }
     
-    public List<Location> getLocationsByEvent(final EventRequestDto request) {
+    public List<Location> getLocationsByEvent(final BaseRequestDto request) {
         
-        if (request == null) {
-            return null;
+        try {
+            if (request == null) {
+                return null;
+            }
+            List<Location> locations = this.eventService.getLocationsByEvent(request);
+            return locations;
+        } catch (SQLException ex) {
+            Logger.getLogger(ServiceProvider.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        List<Location> locations = this.eventService.getLocationsByEvent(request);
-        return locations;
+        return null;
     }
     /* 
     * End EVENT service
@@ -342,12 +361,18 @@ public class ServiceProvider extends BaseServiceProvider {
     */
     public List<Location> getLocations(final LocationRequestDto request) {
                         
-        if (request == null) {
-            return null;
+        try {
+            if (request == null) {
+                return null;
+            }
+            
+            List<Location> locations = this.locationService.getLocations(request);
+            return locations;
+        } catch (SQLException ex) {
+            Logger.getLogger(ServiceProvider.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        List<Location> locations = this.locationService.getLocations(request);
-        return locations;
+        return null;
     }
     
     public List<Event> getEventsByLocation(final LocationRequestDto request) {

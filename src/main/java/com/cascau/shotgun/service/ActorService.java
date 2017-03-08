@@ -53,7 +53,7 @@ public class ActorService extends BaseService {
         return releases;
     }
     
-    public List<Location> getLocationsByActor(final ActorRequestDto request) {
+    public List<Location> getLocationsByActor(final ActorRequestDto request) throws SQLException {
         
         List<Location> locations = this.locationDao.getLocations(request);
         return locations;

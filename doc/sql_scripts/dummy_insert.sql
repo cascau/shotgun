@@ -21,10 +21,10 @@ INSERT INTO `shotgun`.`performer` (`idperformer`, `name`, `type`) VALUES ('20', 
 
 INSERT INTO `shotgun`.`event` (`idevent`, `name`, `type`, `startdt`, `enddt`) VALUES ('1', 'Wacken 2016', '2', '2016-09-22', '2016-10-02');
 INSERT INTO `shotgun`.`event` (`idevent`, `name`, `type`, `startdt`, `enddt`) VALUES ('2', 'Wacken 2017', '2', '2017-08-01', '2017-08-18');
-INSERT INTO `shotgun`.`event` (`idevent`, `name`, `type`, `startdt`, `enddt`) VALUES ('3', 'Rockstadt Exftreme Fest 2016', '2', '1016-09-12', '2016-09-22');
+INSERT INTO `shotgun`.`event` (`idevent`, `name`, `type`, `startdt`, `enddt`) VALUES ('3', 'Rockstadt Exftreme Fest 2016', '2', '2016-09-12', '2016-09-22');
 INSERT INTO `shotgun`.`event` (`idevent`, `name`, `type`, `startdt`, `enddt`) VALUES ('4', 'Rockstadt Extreme fest 2017', '2', '2017-08-20', '2017-09-01');
 INSERT INTO `shotgun`.`event` (`idevent`, `name`, `type`, `startdt`, `enddt`) VALUES ('5', 'Rock am ring 2017', '2', '2017-03-15', '2017-03-28');
-INSERT INTO `shotgun`.`event` (`idevent`, `name`, `type`, `startdt`, `enddt`) VALUES ('6', 'Metallica in Rio', '1', '2017-06-02', '201-06-02');
+INSERT INTO `shotgun`.`event` (`idevent`, `name`, `type`, `startdt`, `enddt`) VALUES ('6', 'Metallica in Rio', '1', '2017-06-02', '2016-06-02');
 INSERT INTO `shotgun`.`event` (`idevent`, `name`, `type`, `startdt`, `enddt`) VALUES ('7', 'The big four', '1', '2017-07-22', '2017-07-22');
 INSERT INTO `shotgun`.`event` (`idevent`, `name`, `type`, `startdt`, `enddt`) VALUES ('8', 'Judas Priest anniversary', '3', '2017-02-14', '2017-06-30');
 INSERT INTO `shotgun`.`event` (`idevent`, `name`, `type`, `startdt`, `enddt`) VALUES ('9', 'Black Sabbath 30 years', '3', '2017-10-01', '2017-11-29');
@@ -32,7 +32,7 @@ INSERT INTO `shotgun`.`event` (`idevent`, `name`, `type`, `startdt`, `enddt`) VA
 INSERT INTO `shotgun`.`event` (`idevent`, `name`, `type`, `startdt`, `enddt`) VALUES ('11', 'No escape', '1', '2017-03-10', '2017-03-10');
 INSERT INTO `shotgun`.`event` (`idevent`, `name`, `type`, `startdt`, `enddt`) VALUES ('12', 'Christmas in hell 2016', '1', '2016-12-24', '2016-12-24');
 INSERT INTO `shotgun`.`event` (`idevent`, `name`, `type`, `startdt`, `enddt`) VALUES ('13', 'Christmas in hell 2017', '1', '2017-12-24', '2017-12-24');
-INSERT INTO `shotgun`.`event` (`idevent`, `name`, `type`, `startdt`, `enddt`) VALUES ('14', 'Great Europe Tour', '3', '2017-01-01', '2017-10-01');
+INSERT INTO `shotgun`.`event` (`idevent`, `name`, `type`, `startdt`, `enddt`) VALUES ('14', 'Great Tour', '3', '2017-01-01', '2017-10-01');
 
 INSERT INTO `shotgun`.`performer_event` (`id`, `idevent`, `idperformer`) VALUES ('1', '1', '1');
 INSERT INTO `shotgun`.`performer_event` (`id`, `idevent`, `idperformer`) VALUES ('2', '1', '2');
@@ -171,3 +171,59 @@ INSERT INTO `shotgun`.`performer_actor` (`id`, `idactor`, `idperformer`) VALUES 
 INSERT INTO `shotgun`.`performer_actor` (`id`, `idactor`, `idperformer`) VALUES ('40', '37', '20');
 INSERT INTO `shotgun`.`performer_actor` (`id`, `idactor`, `idperformer`) VALUES ('41', '38', '20');
 INSERT INTO `shotgun`.`performer_actor` (`id`, `idactor`, `idperformer`) VALUES ('43', '39', '20');
+
+
+INSERT INTO `shotgun`.`location` (`idlocation`, `name`, `country`, `address`, `gpscoords`) VALUES ('1', 'Wacken', 'Germany', 'ICS GmbH, Schenefelder Str. 17 ', '54.02261 9.37995');
+INSERT INTO `shotgun`.`location` (`idlocation`, `name`, `country`, `address`, `gpscoords`) VALUES ('2', 'REF', 'Romania', 'Rasnov Fortress, Brasov County', '45.57463 25.45403');
+INSERT INTO `shotgun`.`location` (`idlocation`, `name`, `country`, `address`, `gpscoords`) VALUES ('3', 'Rock am Ring', 'Germany', 'Nürburgring Grand-Prix Strecke 2, 53520 Nürburg', '49.429000 11.12200');
+INSERT INTO `shotgun`.`location` (`idlocation`, `name`, `country`, `address`, `gpscoords`) VALUES ('4', 'London Park', 'Great Britain', '67 Queensborough Terrace, London', '51.51107 -0.18505');
+INSERT INTO `shotgun`.`location` (`idlocation`, `name`, `country`, `address`, `gpscoords`) VALUES ('5', 'National Arena', 'Romania', ' Bulevardul Basarabia 37-39, București', '44.43422 26.15153');
+INSERT INTO `shotgun`.`location` (`idlocation`, `name`, `country`, `address`, `gpscoords`) VALUES ('6', 'Paris Central', 'France', '48.8584° N, 2.2945° E', '48.8584  2.2945');
+INSERT INTO `shotgun`.`location` (`idlocation`, `name`, `country`, `gpscoords`) VALUES ('7', 'Warsaw Theater', 'Poland', '52.2297 21.0122');
+INSERT INTO `shotgun`.`location` (`idlocation`, `name`, `country`, `gpscoords`) VALUES ('8', 'Rome Amphitheater', 'Italy', '41.89193 12.51133');
+INSERT INTO `shotgun`.`location` (`idlocation`, `name`, `country`, `address`, `gpscoords`) VALUES ('9', 'Madrid', 'Spain', 'Estadio Olímpico, Madrid, Spain', '40.43296 -3.60157');
+INSERT INTO `shotgun`.`location` (`idlocation`, `name`, `country`, `address`, `gpscoords`) VALUES ('10', 'Miami Dome', 'USA', 'Miami City Center', '25.76168 -80.19179');
+INSERT INTO `shotgun`.`location` (`idlocation`, `name`, `country`, `address`, `gpscoords`) VALUES ('11', 'Washington', 'USA', 'The White House, Pennsylvania Avenue Northwest, Washington, DC, United States', '38.89766 -77.03657');
+INSERT INTO `shotgun`.`location` (`idlocation`, `name`, `country`, `gpscoords`) VALUES ('12', 'Huarez', 'Mexico', '25.65165 -100.10592');
+INSERT INTO `shotgun`.`location` (`idlocation`, `name`, `country`, `address`, `gpscoords`) VALUES ('13', 'National Estadio Brasil', 'Brasil', '1-3 Brasília - Federal District, Brazil ', '-15.79423 -47.88217');
+INSERT INTO `shotgun`.`location` (`idlocation`, `name`, `country`, `address`, `gpscoords`) VALUES ('14', 'Mocow Turbine', 'Russia', 'Grand Kremlin Palace, Moscow, Russia', '55.75059 37.61534');
+INSERT INTO `shotgun`.`location` (`idlocation`, `name`, `country`, `address`, `gpscoords`) VALUES ('15', 'Nordic Fjord', 'Finland', 'Mannerheimintie 20', '60.16986 24.93838');
+
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('1', '1', '1', '2016-09-22 00:00:00', '2016-10-02 00:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('2', '2', '1', '2017-08-01 20:00:00', '2017-08-18 22:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('3', '3', '2', '2016-09-12 19:00:00', '2016-09-22 21:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('4', '4', '2', '2017-08-20 00:00:00', '2017-09-01 00:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('5', '5', '3', '2017-03-15 00:00:00', '2017-03-28 00:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('6', '6', '13', '2017-06-02 22:00:00', '2161-06-03 02:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('7', '7', '11', '2017-07-22 18:00:00', '2017-07-22 23:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('8', '8', '8', '2017-02-14 20:00:00', '2017-02-14 22:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('9', '8', '9', '2017-02-15 18:00:00', '2017-02-15 21:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('10', '8', '10', '2017-02-17 20:00:00', '2017-02-17 22:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('11', '8', '7', '2017-06-30 20:00:00', '2017-06-30 22:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('12', '8', '6', '2017-06-20 21:00:00', '2017-06-21 00:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('13', '8', '11', '2017-05-30 17:00:00', '2017-05-30 21:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('14', '9', '1', '2017-10-01 20:00:00', '2017-10-01 22:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('15', '9', '2', '2017-10-11 00:00:00', '2017-10-12 02:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('16', '9', '3', '2017-10-21 20:00:00', '2017-10-21 22:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('17', '9', '4', '2017-11-11 20:00:00', '2017-11-11 23:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('18', '9', '5', '2017-11-21 20:00:00', '2017-11-21 22:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('19', '9', '6', '2017-11-29 20:00:00', '2017-11-29 22:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('20', '10', '10', '2017-04-20 00:00:00', '2017-05-01 00:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('21', '11', '15', '2017-03-10 00:00:00', '2017-03-10 23:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('22', '12', '14', '2016-12-24 15:00:00', '2016-12-24 23:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('23', '13', '14', '2017-12-24 10:00:00', '2017-12-24 23:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('24', '14', '1', '2017-01-01 00:00:00', '2017-01-01 00:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('25', '14', '2', '2017-01-10 00:00:00', '2017-01-10 00:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('26', '14', '3', '2017-02-10 00:00:00', '2017-02-10 00:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('27', '14', '4', '2017-03-02 00:00:00', '2017-03-02 00:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('28', '14', '5', '2017-03-10 00:00:00', '2017-03-10 00:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('29', '14', '6', '2017-05-10 00:00:00', '2017-05-10 00:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('30', '14', '7', '2017-06-16 00:00:00', '2017-06-16 00:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('31', '14', '8', '2017-07-10 00:00:00', '2017-07-10 00:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('32', '14', '9', '2017-07-15 00:00:00', '2017-07-15 00:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('33', '14', '10', '2017-08-01 00:00:00', '2017-08-01 00:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('34', '14', '11', '2017-03-12 00:00:00', '2017-03-12 00:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('35', '14', '12', '2017-09-12 00:00:00', '2017-09-12 00:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('36', '14', '13', '2017-07-12 00:00:00', '2017-07-12 00:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('37', '14', '14', '2017-09-12 00:00:00', '2017-09-12 00:00:00');
+INSERT INTO `shotgun`.`event_locaiton` (`id`, `idevent`, `idlocation`, `startdt`, `enddt`) VALUES ('38', '14', '15', '2017-10-01 00:00:00', '2017-10-01 00:00:00');
