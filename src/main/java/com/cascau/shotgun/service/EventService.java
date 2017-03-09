@@ -9,6 +9,7 @@ import com.cascau.shotgun.contract.Actor;
 import com.cascau.shotgun.contract.Location;
 import com.cascau.shotgun.contract.Sponsor;
 import com.cascau.shotgun.contract.Ticket;
+import com.cascau.shotgun.contract.dto.BaseRequestDto;
 import com.cascau.shotgun.contract.event.Event;
 import com.cascau.shotgun.contract.dto.EventRequestDto;
 import com.cascau.shotgun.contract.performer.Performer;
@@ -52,8 +53,9 @@ public class EventService extends BaseService {
         return null;
     }
     
-    public List<Location> getLocationsByEvent(final EventRequestDto request) {
+    public List<Location> getLocationsByEvent(final BaseRequestDto request) throws SQLException {
         
-        return null;
+        List<Location> locations = this.locationDao.getLocationsByEventId(request);
+        return locations;
     }
 }

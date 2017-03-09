@@ -55,6 +55,8 @@ public interface StoredProcedures {
                 "and e.startdt >= ? \n" +
                 "and e.enddt <= ? \n" + 
                 "order by e.idevent asc";
+        
+        static final String GET_LOCATIONS_BY_EVENT_ID = "";
     }
     
     public interface Performers {
@@ -63,5 +65,17 @@ public interface StoredProcedures {
                 "inner join shotgun.performer_event pe on p.idperformer = pe.idperformer\n" +
                 "where pe.idevent = ? \n" +
                 "order by p.idperformer asc";
+    }
+    
+    public interface Locations {
+        static final String GET_LOCATIONS = 
+                "select l.idlocation, l.name, l.address, l.country, l.gpscoords \n" +
+                "from shotgun.location l";
+        static final String GET_LOCATIONS_BY_EVENT_ID =
+                "select l.idlocation, l.name, l.address, l.country, l.gpscoords \n" +
+                "from shotgun.location l\n" +
+                "inner join shotgun.event_locaiton el on l.idlocation = el.idlocation\n" +
+                "inner join shotgun.event e on e.idevent = el.idevent\n" +
+                "where e.idevent = ?";
     }
 }

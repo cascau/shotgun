@@ -235,41 +235,10 @@ CHANGE COLUMN `idsponsor` `idsponsor` INT(11) NOT NULL AUTO_INCREMENT ;
     ON DELETE NO ACTION
     ON UPDATE CASCADE);
 
-	
-	
-	------------STORED PROCEDURES---------------------------
-USE `shotgun`;
-DROP procedure IF EXISTS `getEventsByDate`;
+-------------------------------------------------
+ALTER TABLE `shotgun`.`location` 
+ADD COLUMN `gpscoords` VARCHAR(100) NULL AFTER `address`;
 
-DELIMITER $$
-USE `shotgun`$$
-
-CREATE DEFINER=`root`@`localhost` PROCEDURE `getEventsByDate`(
-	startdt datetime,
-    enddt datetime
-)
-BEGIN
-	SELECT * FROM shotgun.event e
-	where e.startdt >= @startdt and e.enddt <= @enddt;
-END
 ----------------------------------------------
 
-USE `shotgun`;
-DROP procedure IF EXISTS `getPerformersByEventId`;
-
-DELIMITER $$
-USE `shotgun`$$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `getPerformersByEventId`(
-	eventId int
-)
-BEGIN
-	SELECT * FROM shotgun.performer p
-	where p.idperformer in (
-		select pe.idperformer from shotgun.performer_event pe
-		where pe.idevent = @eventId
-	);
-END$$
-
-DELIMITER ;
--------------------------------------------------
 

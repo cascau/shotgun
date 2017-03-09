@@ -7,7 +7,6 @@ package com.cascau.shotgun.dao;
 
 import com.cascau.shotgun.contract.dto.BaseRequestDto;
 import com.cascau.shotgun.contract.event.Event;
-import com.cascau.shotgun.contract.dto.EventRequestDto;
 import java.sql.CallableStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
